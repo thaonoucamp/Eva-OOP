@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="apple.js"></script>
+</head>
+<body>
+<script>
+    class Human {
+        constructor(name,gender,weight,say) {
+            this._name = name;
+            this._gender = gender;
+            this._weight = weight;
+            this._say = say;
+        }
+
+        get say() {
+            return this._say;
+        }
+
+        set say(value) {
+            this._say = value;
+        }
+
+        get name() {
+            return this._name;
+        }
+
+        set name(value) {
+            this._name = value;
+        }
+
+        get gender() {
+            return this._gender;
+        }
+
+        set gender(value) {
+            this._gender = value;
+        }
+
+        get weight() {
+            return this._weight;
+        }
+
+        set weight(value) {
+            this._weight = value;
+        }
+        say() {
+            return this._name + 'say : Hello World';
+        }
+        eat() {
+            if (apple.weight > 0) {
+                apple.weight--;
+                this._weight++;
+                return this._weight;
+            }
+        }
+        checkApple() {
+            if (apple.weight > 0 || apple.weight <= 10) {
+                return apple.weight;
+            }
+        }
+    }
+    let human = new Human('Thao','man',60);
+    let a = human.eat();
+    let b = human.checkApple();
+    let c = human.say();
+    console.log(a,b,c);
+</script>
+</body>
+</html>
